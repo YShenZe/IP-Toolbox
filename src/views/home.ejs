@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Toolbox</title>
+  <link href="/public/assets/styles.css" rel="stylesheet"> <!-- 引入打包后的 CSS -->
+</head>
+<body class="bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+  <div class="container mx-auto p-4">
+    <header class="mb-8 text-center">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white">IP 工具箱</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300">查看您的 IP 信息</p>
+    </header>
+
+    <!-- 显示用户的公共 IP 及详细信息 -->
+    <section class="bg-white rounded-lg shadow-lg p-6 mb-8 dark:bg-gray-700">
+      <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">您的公共 IP 地址</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300">IP 地址: <span class="font-bold text-blue-500"><%= ip %></span></p>
+      <div class="mt-4">
+        <h3 class="text-lg text-gray-800 dark:text-gray-200">IP 详细信息</h3>
+        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+          <li><strong>主机名:</strong> <%= ipInfo.hostname || '未知' %></li>
+          <li><strong>城市:</strong> <%= ipInfo.city || '未知' %></li>
+          <li><strong>地区:</strong> <%= ipInfo.region || '未知' %></li>
+          <li><strong>国家:</strong> <%= ipInfo.country || '未知' %></li>
+          <li><strong>邮政编码:</strong> <%= ipInfo.postal || '未知' %></li>
+          <li><strong>时区:</strong> <%= ipInfo.timezone || '未知' %></li>
+          <li><strong>组织:</strong> <%= ipInfo.org || '未知' %></li>
+          <li><strong>位置信息:</strong> <%= ipInfo.loc || '未知' %> (纬度, 经度)</li>
+        </ul>
+      </div>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">通过多个来源检测到您的 IP 地址。</p>
+    </section>
+    <!-- 简单底部信息 -->
+    <footer class="text-center text-sm text-gray-500 dark:text-gray-400">
+      <p>&copy; 2025 IP Toolbox. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="/public/assets/bundle.js"></script> <!-- 引入打包后的 JS -->
+</body>
+</html>

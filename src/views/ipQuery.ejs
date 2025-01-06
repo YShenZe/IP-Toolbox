@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP 查询</title>
+  <link href="/assets/styles.css" rel="stylesheet"> <!-- 引入打包后的 CSS -->
+</head>
+<body class="bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+  <div class="container mx-auto p-4">
+    <header class="mb-8 text-center">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white">IP 查询工具</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300">查询您的 IP 信息</p>
+    </header>
+
+    <section class="bg-white rounded-lg shadow-lg p-6 mb-8 dark:bg-gray-700">
+      <div class="mb-4">
+        <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">您的公共 IP 地址</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300">IP 地址: <span class="font-bold text-blue-500"><%= ip %></span></p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">IP 详细信息</h3>
+        <pre class="bg-gray-100 p-4 rounded-md text-sm text-gray-700 dark:text-gray-300">
+          <%= JSON.stringify(ipInfo, null, 2) %>
+        </pre>
+      </div>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 dark:text-gray-400">
+      <p>&copy; 2025 IP Toolbox. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/bundle.js"></script> <!-- 引入打包后的 JS -->
+</body>
+</html>
