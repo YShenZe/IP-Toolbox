@@ -1,4 +1,3 @@
-// services/ipService.js
 import axios from 'axios';
 
 export async function getPublicIP() {

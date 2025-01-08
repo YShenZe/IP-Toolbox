@@ -1,4 +1,3 @@
-// services/websiteService.js
 import axios from 'axios';
 
 export async function checkWebsiteAvailability(url) {
