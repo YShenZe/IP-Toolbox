@@ -1,47 +1,45 @@
-> [!TIP]
-> 目前正在开发中，使用技术栈
-> - nodejs
-> - webpack
-> - tailwindcss
+# IP-Toolbox  
 
-# IP-Toolbox
-A tool to check IP information and perform network tests
+> **⚠️ Currently in Development**  
+> **Tech Stack**:  
+> - Node.js  
+> - Webpack  
+> - Tailwind CSS  
 
-See your own IP: Display local IP from multiple IPv4 and IPv6 sources detection
+## Introduction  
 
-See IP information: Display all IP related information, including country, region, ASN, geographic location, etc.
+**IP-Toolbox** is a tool for checking IP information and performing network tests. It provides the following features:  
 
-Availability Detection: Detect the availability of some websites: Google, Github, Youtube, Netease, Baidu, etc.
+- **View Your Own IP**: Retrieve and display local IPv4 and IPv6 from multiple sources.  
+- **IP Information Lookup**: Show detailed IP-related information, including country, region, ASN, and geographic location.  
+- **Availability Detection**: Check the availability of major websites such as Google, GitHub, YouTube, Netease, Baidu, etc.  
+- **WebRTC Detection**: Detect the IP address used when connecting via WebRTC.  
+- **DNS Leakage Detection**: Analyze DNS leaks to determine potential privacy risks when using a VPN or proxy.  
+- **Dark Mode**: Automatically switch between dark and light modes based on system settings or manual selection.  
+- **Simple Mode**: A mobile-optimized mode that shortens page length for quick access to key information.  
+- **Custom IP Lookup**: Manually check information for any given IP address.  
+- **Internet Connectivity Status**: Based on availability test results, provide a notification indicating whether the user has full internet access.  
 
-WebRTC Detection: Check the IP used when connecting with WebRTC.
+## Installation & Usage  
 
-DNS Leakage Detection: View DNS export information in order to see if there is a risk of DNS leakage of privacy in the case of VPN/proxy.
+### 1. Install dependencies  
 
-Dark Mode: Automatically switch between dark/daylight mode according to system settings, or manually switch between them
-
-Simple Mode: Specialized mode for mobile version to shorten the page length and quickly view the most important information.
-
-Check any IP information: You can check any IP information through the widget.
-
-According to the result of the availability test, it will return a reminder of whether you can access the world wide web or not.
-
-# 安装使用
-
-先安装依赖：
 ```bash
 npm i
 ```
 
-然后打包：
+### 2. Build the project  
+
 ```bash
 npm run build
 ```
 
-最后运行：
+### 3. Run the project  
+
 ```bash
 npm run start
 ```
 
-# LICENSE
+## License  
 
-使用MIT协议进行开源
+This project is open-source under the **MIT License**.
